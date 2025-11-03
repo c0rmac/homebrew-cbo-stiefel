@@ -32,7 +32,7 @@ class CboStiefel < Formula
 
     # Ensure CMake finds Homebrew's installed dependencies
     ENV.prepend_path "CMAKE_PREFIX_PATH", Formula["eigen"].opt_share/"eigen3/cmake"
-    ENV.prepend_path "CMAKE_PREFIX_PATH", Formula["pybind11"].cmake_dir
+    ENV.prepend_path "CMAKE_PREFIX_PATH", Formula["pybind11"].opt_share/"cmake"
     ENV.prepend_path "CMAKE_PREFIX_PATH", Formula["python"].opt_prefix
 
     # Configure and build the module
